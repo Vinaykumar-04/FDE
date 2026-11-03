@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "onprem-airgap",
+  "title": "On-premises and air-gapped deployments",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Some customers run software in their own data center or a network that cannot connect to the public internet.",
+  "concept": "An on-premises deployment runs on customer-managed infrastructure. An air-gapped environment has no direct connection to an external network.",
+  "analogy": "It is like delivering a sealed kit to a secure site where outside delivery services cannot enter.",
+  "example": "The customer needs a release package in an isolated network. Confirm approved transfer, signatures, dependencies, update procedure, and support path.",
+  "mistake": "Assuming the environment can download images, call external services, or receive updates automatically.",
+  "nextStep": "Inventory dependencies and approvals early, then test the exact installation path the customer permits.",
+  "distractor": "Air-gapped means the server is connected to a faster Wi-Fi network."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Some customers run software in their own data center or a network that cannot connect to the public internet.
+
+## The idea
+
+An on-premises deployment runs on customer-managed infrastructure. An air-gapped environment has no direct connection to an external network.
+
+> It is like delivering a sealed kit to a secure site where outside delivery services cannot enter.
+
+## Worked example
+
+The customer needs a release package in an isolated network. Confirm approved transfer, signatures, dependencies, update procedure, and support path.
+
+## Common mistakes
+
+- Assuming the environment can download images, call external services, or receive updates automatically.
+- Inventory dependencies and approvals early, then test the exact installation path the customer permits.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

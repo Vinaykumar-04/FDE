@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "kubernetes-basics",
+  "title": "Kubernetes basics",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Some customers use Kubernetes to run and manage containerized services across a cluster.",
+  "concept": "A cluster runs workloads described as desired state. Kubernetes controllers work to keep the actual state close to that description.",
+  "analogy": "It is like a venue manager keeping the requested number of staffed rooms available as people arrive and leave.",
+  "example": "A deployment asks for two copies of an API. A service gives those copies a stable network address while Kubernetes replaces an unhealthy copy.",
+  "mistake": "Changing a live pod by hand and assuming the change will survive a replacement.",
+  "nextStep": "Understand the deployment, service, configuration, and health checks before investigating a workload.",
+  "distractor": "Kubernetes is a programming language for container images."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Some customers use Kubernetes to run and manage containerized services across a cluster.
+
+## The idea
+
+A cluster runs workloads described as desired state. Kubernetes controllers work to keep the actual state close to that description.
+
+> It is like a venue manager keeping the requested number of staffed rooms available as people arrive and leave.
+
+## Worked example
+
+A deployment asks for two copies of an API. A service gives those copies a stable network address while Kubernetes replaces an unhealthy copy.
+
+## Common mistakes
+
+- Changing a live pod by hand and assuming the change will survive a replacement.
+- Understand the deployment, service, configuration, and health checks before investigating a workload.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "llm-apis",
+  "title": "Calling an LLM API",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Many customer-facing AI features call a language model through an API. The request and response need careful handling like any other integration.",
+  "concept": "An LLM API accepts instructions and input, then returns generated output. Track model, token usage, latency, errors, and data handling rules.",
+  "analogy": "It is like asking a specialist a question: the answer depends on the instructions, context, and time available.",
+  "example": "Send a short support summary request with only approved case details, set a timeout, and record safe usage metrics.",
+  "mistake": "Assuming the output is always correct or sending customer data before confirming policy and retention.",
+  "nextStep": "Start with minimal approved data, handle failures, and measure quality, cost, and latency for real examples.",
+  "distractor": "An LLM API guarantees a factually correct answer for every prompt."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Many customer-facing AI features call a language model through an API. The request and response need careful handling like any other integration.
+
+## The idea
+
+An LLM API accepts instructions and input, then returns generated output. Track model, token usage, latency, errors, and data handling rules.
+
+> It is like asking a specialist a question: the answer depends on the instructions, context, and time available.
+
+## Worked example
+
+Send a short support summary request with only approved case details, set a timeout, and record safe usage metrics.
+
+## Common mistakes
+
+- Assuming the output is always correct or sending customer data before confirming policy and retention.
+- Start with minimal approved data, handle failures, and measure quality, cost, and latency for real examples.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

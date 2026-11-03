@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "rest-api-requests",
+  "title": "REST APIs and requests",
+  "minutes": 5,
+  "xp": 10,
+  "why": "FDEs often connect a product to systems a customer already uses. HTTP APIs are a common way those systems exchange information.",
+  "concept": "An API request combines a method, an address, headers, and sometimes a body. The response includes a status and data.",
+  "analogy": "It is like filling out a service request: the method says what you want done, the address says where, and the body carries details.",
+  "example": "To create a support ticket, send a POST request to the tickets endpoint with the title and requester in JSON, then inspect the response ID.",
+  "mistake": "Assuming an endpoint or request shape without checking its documentation and example response.",
+  "nextStep": "Confirm the method, path, required fields, authentication, and expected response before wiring the call into a workflow.",
+  "distractor": "A REST API is a graphical page that only people can click."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+FDEs often connect a product to systems a customer already uses. HTTP APIs are a common way those systems exchange information.
+
+## The idea
+
+An API request combines a method, an address, headers, and sometimes a body. The response includes a status and data.
+
+> It is like filling out a service request: the method says what you want done, the address says where, and the body carries details.
+
+## Worked example
+
+To create a support ticket, send a POST request to the tickets endpoint with the title and requester in JSON, then inspect the response ID.
+
+## Common mistakes
+
+- Assuming an endpoint or request shape without checking its documentation and example response.
+- Confirm the method, path, required fields, authentication, and expected response before wiring the call into a workflow.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

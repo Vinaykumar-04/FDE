@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "ship-small-api",
+  "title": "Ship a small API",
+  "minutes": 6,
+  "xp": 10,
+  "why": "A small end-to-end service teaches the handoff between code, configuration, and a running environment.",
+  "concept": "A service should expose a clear interface, validate input, return predictable responses, and provide enough logs to diagnose failures.",
+  "analogy": "Think of a service like a staffed counter: it needs a clear request form, rules for valid requests, and a receipt showing what happened.",
+  "example": "Build a health endpoint and a read-only customer status endpoint. Validate the customer ID, return JSON, and log a request ID for each call.",
+  "mistake": "Returning internal errors to users or deploying before checking the service with realistic inputs.",
+  "nextStep": "Run local checks, test the error path, document configuration, and verify the deployed endpoint from the expected network.",
+  "distractor": "An API is complete as soon as its code compiles."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+A small end-to-end service teaches the handoff between code, configuration, and a running environment.
+
+## The idea
+
+A service should expose a clear interface, validate input, return predictable responses, and provide enough logs to diagnose failures.
+
+> Think of a service like a staffed counter: it needs a clear request form, rules for valid requests, and a receipt showing what happened.
+
+## Worked example
+
+Build a health endpoint and a read-only customer status endpoint. Validate the customer ID, return JSON, and log a request ID for each call.
+
+## Common mistakes
+
+- Returning internal errors to users or deploying before checking the service with realistic inputs.
+- Run local checks, test the error path, document configuration, and verify the deployed endpoint from the expected network.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

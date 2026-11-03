@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "structured-output",
+  "title": "Structured model output",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Software needs predictable fields to use model responses safely in a workflow.",
+  "concept": "Structured output constrains a model response to a defined shape, often JSON with required fields and allowed values.",
+  "analogy": "It is like a form with labeled boxes: each answer has a place, and missing information can be marked clearly.",
+  "example": "Extract a date, issue type, and confidence from a ticket. Validate the response against a schema before creating a downstream record.",
+  "mistake": "Assuming valid-looking JSON is semantically correct or using an unchecked field to trigger an important action.",
+  "nextStep": "Validate types and allowed values, handle missing or invalid fields, and require confirmation for consequential actions.",
+  "distractor": "Structured output removes the need to test model behavior."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Software needs predictable fields to use model responses safely in a workflow.
+
+## The idea
+
+Structured output constrains a model response to a defined shape, often JSON with required fields and allowed values.
+
+> It is like a form with labeled boxes: each answer has a place, and missing information can be marked clearly.
+
+## Worked example
+
+Extract a date, issue type, and confidence from a ticket. Validate the response against a schema before creating a downstream record.
+
+## Common mistakes
+
+- Assuming valid-looking JSON is semantically correct or using an unchecked field to trigger an important action.
+- Validate types and allowed values, handle missing or invalid fields, and require confirmation for consequential actions.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

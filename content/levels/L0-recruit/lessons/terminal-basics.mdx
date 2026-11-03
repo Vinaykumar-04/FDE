@@ -1,0 +1,30 @@
+export const lesson = {
+  id: 'terminal-basics', title: 'Terminal basics', minutes: 5, xp: 10,
+  quiz: [
+    { question: 'What does `pwd` show?', choices: ['Your current folder', 'Your password', 'The internet speed'], answer: 0, explanation: '`pwd` prints the current working directory.' },
+    { question: 'What does `ls` do on macOS or Linux?', choices: ['Lists files and folders', 'Deletes a folder', 'Starts a browser'], answer: 0, explanation: '`ls` lists items in the current directory.' },
+    { question: 'Why check a command before running it?', choices: ['Commands can change files or systems', 'Commands are always harmless', 'It makes the screen brighter'], answer: 0, explanation: 'Understand what a command does, especially before deletion or system changes.' },
+  ],
+  cards: [
+    { front: 'What is a terminal?', back: 'A text-based way to give commands to your computer.' },
+    { front: 'What does `pwd` mean?', back: 'Print working directory; it shows your current folder.' },
+    { front: 'What does `cd` do?', back: 'Changes the current folder.' },
+  ],
+};
+
+## Why it matters for an FDE
+Many developer tools run in a terminal. You can inspect files, run an app, and see useful error messages without hunting through menus.
+
+## The idea
+Treat the terminal like a precise conversation with your computer. You type a short instruction; the computer replies with text. The current folder is your location in that conversation.
+
+## Worked example
+`pwd` shows where you are. `ls` lists the files there. `cd projects` moves into a folder named `projects`. `cd ..` moves one folder up. Start by looking around before changing anything.
+
+## Common mistakes
+- Typing a command in the wrong folder.
+- Copying a command without knowing what it changes.
+- Confusing the terminal with Python: they are different tools, though a terminal can start Python.
+
+## Quick check
+Use the three questions above to check your understanding. Read the explanation after each answer.

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "embeddings",
+  "title": "Embeddings and similarity",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Search over customer documents often needs to find meaning, not just exact word matches.",
+  "concept": "An embedding maps text into a list of numbers that represents aspects of its meaning. Similar vectors can indicate related content.",
+  "analogy": "Imagine each paragraph placed on a map: related ideas land near one another, even when their exact words differ.",
+  "example": "A user asks “How do I reset access?” A semantic search can find a document titled “Account recovery” even though the wording differs.",
+  "mistake": "Treating similarity as proof that a document is correct, current, or allowed for this user.",
+  "nextStep": "Filter by permissions and metadata, inspect retrieved passages, and measure search quality using real questions.",
+  "distractor": "An embedding is an encrypted copy of a paragraph."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Search over customer documents often needs to find meaning, not just exact word matches.
+
+## The idea
+
+An embedding maps text into a list of numbers that represents aspects of its meaning. Similar vectors can indicate related content.
+
+> Imagine each paragraph placed on a map: related ideas land near one another, even when their exact words differ.
+
+## Worked example
+
+A user asks “How do I reset access?” A semantic search can find a document titled “Account recovery” even though the wording differs.
+
+## Common mistakes
+
+- Treating similarity as proof that a document is correct, current, or allowed for this user.
+- Filter by permissions and metadata, inspect retrieved passages, and measure search quality using real questions.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

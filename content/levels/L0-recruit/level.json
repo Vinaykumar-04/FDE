@@ -1,0 +1,6 @@
+{
+  "title": "Start with the essentials",
+  "rank": "Recruit",
+  "gameIds": ["status-code-match", "terminal-quest", "json-debugger"],
+  "bossId": "integration-script"
+}

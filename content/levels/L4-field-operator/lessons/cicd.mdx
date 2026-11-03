@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "cicd",
+  "title": "CI/CD and safe releases",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Customer-facing changes should be checked before they reach a live environment.",
+  "concept": "Continuous integration runs checks on code changes. Continuous delivery prepares a tested change for release through a controlled process.",
+  "analogy": "It is like inspecting a package at each checkpoint before it leaves the warehouse.",
+  "example": "A pull request triggers lint, unit tests, build, and a smoke test. A release then promotes the reviewed artifact to the customer environment.",
+  "mistake": "Treating a green build as proof that every customer workflow works or releasing without a rollback plan.",
+  "nextStep": "Make checks repeatable, review the diff, deploy gradually when possible, and know how to reverse a bad release.",
+  "distractor": "CI/CD means pushing every local edit directly to production."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Customer-facing changes should be checked before they reach a live environment.
+
+## The idea
+
+Continuous integration runs checks on code changes. Continuous delivery prepares a tested change for release through a controlled process.
+
+> It is like inspecting a package at each checkpoint before it leaves the warehouse.
+
+## Worked example
+
+A pull request triggers lint, unit tests, build, and a smoke test. A release then promotes the reviewed artifact to the customer environment.
+
+## Common mistakes
+
+- Treating a green build as proof that every customer workflow works or releasing without a rollback plan.
+- Make checks repeatable, review the diff, deploy gradually when possible, and know how to reverse a bad release.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

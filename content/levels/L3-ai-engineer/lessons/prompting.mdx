@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "prompting",
+  "title": "Prompting for useful results",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Clear instructions help a model respond in a format and style that fits a customer workflow.",
+  "concept": "A prompt gives the model a task, relevant context, constraints, and a desired output. Examples can clarify the expected pattern.",
+  "analogy": "A prompt is like a good work brief: it says what done means and what boundaries to respect.",
+  "example": "Ask for a concise summary using only the supplied notes, identify unknown details explicitly, and use headings for decision, evidence, and open questions.",
+  "mistake": "Adding vague goals or private data while expecting the model to infer unstated rules.",
+  "nextStep": "Specify the task, context, boundaries, output format, and how to handle uncertainty; test against varied examples.",
+  "distractor": "Prompting is choosing a longer instruction regardless of the task."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Clear instructions help a model respond in a format and style that fits a customer workflow.
+
+## The idea
+
+A prompt gives the model a task, relevant context, constraints, and a desired output. Examples can clarify the expected pattern.
+
+> A prompt is like a good work brief: it says what done means and what boundaries to respect.
+
+## Worked example
+
+Ask for a concise summary using only the supplied notes, identify unknown details explicitly, and use headings for decision, evidence, and open questions.
+
+## Common mistakes
+
+- Adding vague goals or private data while expecting the model to infer unstated rules.
+- Specify the task, context, boundaries, output format, and how to handle uncertainty; test against varied examples.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

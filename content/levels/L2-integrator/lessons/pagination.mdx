@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "pagination",
+  "title": "Pagination",
+  "minutes": 5,
+  "xp": 10,
+  "why": "APIs limit how many records they return at once. Pagination helps you retrieve a large dataset in manageable pieces.",
+  "concept": "A paginated response contains a page of items and a cursor or next-page link. Continue until the API says there are no more results.",
+  "analogy": "It is like reading a book one page at a time and using a bookmark to continue where you left off.",
+  "example": "A customer has 4,000 contacts. Request a page, save its cursor, process the contacts, then fetch the next page until the cursor is absent.",
+  "mistake": "Assuming the first response contains every record or building a cursor from a guessed page number.",
+  "nextStep": "Follow the API’s returned cursor, handle empty pages, and checkpoint progress if a long sync may restart.",
+  "distractor": "Pagination is a security rule that blocks users from editing records."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+APIs limit how many records they return at once. Pagination helps you retrieve a large dataset in manageable pieces.
+
+## The idea
+
+A paginated response contains a page of items and a cursor or next-page link. Continue until the API says there are no more results.
+
+> It is like reading a book one page at a time and using a bookmark to continue where you left off.
+
+## Worked example
+
+A customer has 4,000 contacts. Request a page, save its cursor, process the contacts, then fetch the next page until the cursor is absent.
+
+## Common mistakes
+
+- Assuming the first response contains every record or building a cursor from a guessed page number.
+- Follow the API’s returned cursor, handle empty pages, and checkpoint progress if a long sync may restart.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

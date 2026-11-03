@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "idempotency",
+  "title": "Idempotency and duplicate safety",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Retries, webhook redelivery, and timeouts can cause the same action to arrive more than once.",
+  "concept": "An idempotent operation produces the same effect when repeated with the same identity. An idempotency key lets a service recognize a replay.",
+  "analogy": "It is like a numbered claim ticket: handing in the same ticket twice should not create two separate claims.",
+  "example": "A payment request times out after the provider processed it. Retry using the same idempotency key and check the original result.",
+  "mistake": "Generating a new key for every retry or treating a timeout as proof that nothing happened.",
+  "nextStep": "Choose a stable key for one intended action, store its outcome, and define how long the key remains valid.",
+  "distractor": "Idempotency means every request must return a different result."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Retries, webhook redelivery, and timeouts can cause the same action to arrive more than once.
+
+## The idea
+
+An idempotent operation produces the same effect when repeated with the same identity. An idempotency key lets a service recognize a replay.
+
+> It is like a numbered claim ticket: handing in the same ticket twice should not create two separate claims.
+
+## Worked example
+
+A payment request times out after the provider processed it. Retry using the same idempotency key and check the original result.
+
+## Common mistakes
+
+- Generating a new key for every retry or treating a timeout as proof that nothing happened.
+- Choose a stable key for one intended action, store its outcome, and define how long the key remains valid.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

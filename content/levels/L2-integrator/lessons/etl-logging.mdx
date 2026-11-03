@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "etl-logging",
+  "title": "ETL pipelines and logs",
+  "minutes": 6,
+  "xp": 10,
+  "why": "Data sync work is easier to trust when each step is visible and failures can be traced.",
+  "concept": "ETL means extract, transform, and load. Logs record useful events and context so a person can understand what a run did.",
+  "analogy": "ETL is like sorting parcels: collect them, label them in the receiving format, then place them on the right shelf.",
+  "example": "Read yesterday’s support tickets, map priority values, load them into a reporting table, and log the run ID and number of accepted or rejected rows.",
+  "mistake": "Logging tokens or personal data, or swallowing errors so a partial load looks successful.",
+  "nextStep": "Log run IDs, counts, durations, and safe error codes; keep sensitive values out of logs.",
+  "distractor": "ETL is a type of user interface theme."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Data sync work is easier to trust when each step is visible and failures can be traced.
+
+## The idea
+
+ETL means extract, transform, and load. Logs record useful events and context so a person can understand what a run did.
+
+> ETL is like sorting parcels: collect them, label them in the receiving format, then place them on the right shelf.
+
+## Worked example
+
+Read yesterday’s support tickets, map priority values, load them into a reporting table, and log the run ID and number of accepted or rejected rows.
+
+## Common mistakes
+
+- Logging tokens or personal data, or swallowing errors so a partial load looks successful.
+- Log run IDs, counts, durations, and safe error codes; keep sensitive values out of logs.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "demos-handover",
+  "title": "Demos and handover",
+  "minutes": 5,
+  "xp": 10,
+  "why": "A demo should help a customer judge a result, and a handover should help them operate it afterwards.",
+  "concept": "A good demo follows a realistic task and shows evidence of value. A handover covers operation, limits, owners, and support steps.",
+  "analogy": "A demo is a guided test drive; a handover is giving the driver the map, keys, and maintenance notes.",
+  "example": "Show a user submitting one real example, reviewing the result, and correcting an exception. Then show where to find logs and who owns failed cases.",
+  "mistake": "Showing only a polished happy path or ending without documenting known gaps.",
+  "nextStep": "Agree on the demo goal, use representative data, show one failure path, and leave concise operating notes.",
+  "distractor": "A demo is a collection of slides describing features the customer cannot try."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+A demo should help a customer judge a result, and a handover should help them operate it afterwards.
+
+## The idea
+
+A good demo follows a realistic task and shows evidence of value. A handover covers operation, limits, owners, and support steps.
+
+> A demo is a guided test drive; a handover is giving the driver the map, keys, and maintenance notes.
+
+## Worked example
+
+Show a user submitting one real example, reviewing the result, and correcting an exception. Then show where to find logs and who owns failed cases.
+
+## Common mistakes
+
+- Showing only a polished happy path or ending without documenting known gaps.
+- Agree on the demo goal, use representative data, show one failure path, and leave concise operating notes.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

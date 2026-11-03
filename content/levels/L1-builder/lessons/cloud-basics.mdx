@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "cloud-basics",
+  "title": "Cloud basics",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Customer systems may run on cloud services with different networks, permissions, and costs. FDEs need to ask how those pieces fit together.",
+  "concept": "Cloud platforms provide computing, storage, networking, and managed services on demand. An account or project groups resources and access policies.",
+  "analogy": "A cloud account is like a campus: projects are buildings, services are rooms, and permissions decide who can enter.",
+  "example": "A customer wants an API deployed privately. Identify the cloud account, network boundary, service identity, data store, and people who approve access.",
+  "mistake": "Choosing a service before understanding region, data rules, networking, and operational ownership.",
+  "nextStep": "Draw a simple deployment diagram and confirm the customer’s access, location, and cost constraints.",
+  "distractor": "Cloud means software runs without computers or networks."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Customer systems may run on cloud services with different networks, permissions, and costs. FDEs need to ask how those pieces fit together.
+
+## The idea
+
+Cloud platforms provide computing, storage, networking, and managed services on demand. An account or project groups resources and access policies.
+
+> A cloud account is like a campus: projects are buildings, services are rooms, and permissions decide who can enter.
+
+## Worked example
+
+A customer wants an API deployed privately. Identify the cloud account, network boundary, service identity, data store, and people who approve access.
+
+## Common mistakes
+
+- Choosing a service before understanding region, data rules, networking, and operational ownership.
+- Draw a simple deployment diagram and confirm the customer’s access, location, and cost constraints.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,11 @@
+{
+  "checkedOn": "2026-11-03",
+  "companies": [
+    { "name": "Deployment.io", "place": "Remote · US or India", "role": "Forward Deployed Engineer", "url": "https://deployment.io/careers/", "note": "Current role listing; customer outcomes from intake to production." },
+    { "name": "Winsen Labs", "place": "Mumbai · Hybrid", "role": "Forward-Deployed Engineer", "url": "https://winsenlabs.com/careers/forward-deployed-engineer", "note": "Current listing says two positions; AI and customer deployment work." },
+    { "name": "Deployment Inc", "place": "Gurugram", "role": "Forward Deployed Engineer", "url": "https://deployment.inc/careers/", "note": "Careers page lists an FDE role for enterprise AI deployments." },
+    { "name": "Wipro", "place": "India · see posting", "role": "Forward-Deployed Engineer", "url": "https://careers.wipro.com/job/Forward-Deployed-Engineer/200958-en_US/", "note": "Company careers posting for customer-focused solution delivery." },
+    { "name": "NTT DATA", "place": "Bangalore", "role": "Forward-Deployed Engineer", "url": "https://careers-inc.nttdata.com/job/Bangalore-Forward-Deployed-Engineer-KA/1432564300/", "note": "Company careers posting for enterprise AI solutions." },
+    { "name": "OpenAI", "place": "Multiple global locations", "role": "Forward Deployed Engineer", "url": "https://openai.com/careers/search/?action=apply", "note": "Careers search currently lists FDE and deployment roles in several locations." }
+  ]
+}

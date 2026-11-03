@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "python-modules",
+  "title": "Python modules and project structure",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Customer integrations grow beyond a single script. A tidy project is easier to review, test, and hand over.",
+  "concept": "A module is a Python file that groups related code. A package groups modules so the project can be split into clear responsibilities.",
+  "analogy": "Think of a toolbox with labeled drawers: each drawer holds tools for one kind of task.",
+  "example": "A customer sync script now has API calls, data cleanup, and logging mixed together. Move each responsibility into a small module and keep one clear entry point.",
+  "mistake": "Putting every function into one giant file or splitting code into tiny files with no useful boundary.",
+  "nextStep": "Choose boundaries based on a responsibility, then add a small test around the behavior you moved.",
+  "distractor": "A module is a remote server that runs Python automatically."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Customer integrations grow beyond a single script. A tidy project is easier to review, test, and hand over.
+
+## The idea
+
+A module is a Python file that groups related code. A package groups modules so the project can be split into clear responsibilities.
+
+> Think of a toolbox with labeled drawers: each drawer holds tools for one kind of task.
+
+## Worked example
+
+A customer sync script now has API calls, data cleanup, and logging mixed together. Move each responsibility into a small module and keep one clear entry point.
+
+## Common mistakes
+
+- Putting every function into one giant file or splitting code into tiny files with no useful boundary.
+- Choose boundaries based on a responsibility, then add a small test around the behavior you moved.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

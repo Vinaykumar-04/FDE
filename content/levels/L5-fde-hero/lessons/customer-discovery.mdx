@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "customer-discovery",
+  "title": "Customer discovery",
+  "minutes": 5,
+  "xp": 10,
+  "why": "An FDE needs to understand the real workflow before deciding what to build.",
+  "concept": "Discovery uncovers users, goals, current steps, pain points, data, constraints, and how success will be measured.",
+  "analogy": "It is like mapping a route with the person who takes it every day before you design a shortcut.",
+  "example": "A team asks for automated invoice review. Ask who reviews invoices, what exceptions matter, which systems are involved, and what result would save time safely.",
+  "mistake": "Taking the requested feature as the problem statement without watching the current workflow.",
+  "nextStep": "Ask open questions, request a recent example, and summarize what you heard for the customer to correct.",
+  "distractor": "Discovery is a presentation where the engineer lists product features."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+An FDE needs to understand the real workflow before deciding what to build.
+
+## The idea
+
+Discovery uncovers users, goals, current steps, pain points, data, constraints, and how success will be measured.
+
+> It is like mapping a route with the person who takes it every day before you design a shortcut.
+
+## Worked example
+
+A team asks for automated invoice review. Ask who reviews invoices, what exceptions matter, which systems are involved, and what result would save time safely.
+
+## Common mistakes
+
+- Taking the requested feature as the problem statement without watching the current workflow.
+- Ask open questions, request a recent example, and summarize what you heard for the customer to correct.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

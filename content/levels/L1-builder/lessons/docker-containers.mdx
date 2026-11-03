@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "docker-containers",
+  "title": "Docker and containers",
+  "minutes": 5,
+  "xp": 10,
+  "why": "A service that works on your laptop can fail on a customer environment when tools or versions differ. Containers make the runtime more repeatable.",
+  "concept": "A container image packages an application and its required runtime files. A running container is an isolated process created from that image.",
+  "analogy": "An image is a recipe box with the ingredients and instructions; a container is one prepared serving running on a host.",
+  "example": "A small API depends on a particular Python version. Build an image with that runtime and start it with the required port and environment settings.",
+  "mistake": "Putting secrets in the image or assuming a container automatically includes persistent storage.",
+  "nextStep": "Keep credentials outside the image, document ports and volumes, and test the container with a clean environment.",
+  "distractor": "Docker is a cloud provider that stores a company’s databases."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+A service that works on your laptop can fail on a customer environment when tools or versions differ. Containers make the runtime more repeatable.
+
+## The idea
+
+A container image packages an application and its required runtime files. A running container is an isolated process created from that image.
+
+> An image is a recipe box with the ingredients and instructions; a container is one prepared serving running on a host.
+
+## Worked example
+
+A small API depends on a particular Python version. Build an image with that runtime and start it with the required port and environment settings.
+
+## Common mistakes
+
+- Putting secrets in the image or assuming a container automatically includes persistent storage.
+- Keep credentials outside the image, document ports and volumes, and test the container with a clean environment.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "api-keys-oauth",
+  "title": "API keys and OAuth",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Integrations need a safe way to prove who is calling and what they are allowed to do.",
+  "concept": "An API key is a secret credential. OAuth is a flow for granting scoped access without sharing a user’s password with the application.",
+  "analogy": "An API key is like a service badge; OAuth is like a visitor pass with a named purpose and limited access.",
+  "example": "A customer wants calendar access for one workspace. Ask for the approved OAuth scopes and use the provider’s authorization flow.",
+  "mistake": "Committing keys to source control or requesting broad scopes when a narrower permission works.",
+  "nextStep": "Store secrets in an approved secret manager, request the least access needed, and plan for rotation and revocation.",
+  "distractor": "OAuth is a method for compressing JSON responses."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Integrations need a safe way to prove who is calling and what they are allowed to do.
+
+## The idea
+
+An API key is a secret credential. OAuth is a flow for granting scoped access without sharing a user’s password with the application.
+
+> An API key is like a service badge; OAuth is like a visitor pass with a named purpose and limited access.
+
+## Worked example
+
+A customer wants calendar access for one workspace. Ask for the approved OAuth scopes and use the provider’s authorization flow.
+
+## Common mistakes
+
+- Committing keys to source control or requesting broad scopes when a narrower permission works.
+- Store secrets in an approved secret manager, request the least access needed, and plan for rotation and revocation.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

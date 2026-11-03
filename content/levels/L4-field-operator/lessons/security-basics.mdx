@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "security-basics",
+  "title": "Security fundamentals",
+  "minutes": 5,
+  "xp": 10,
+  "why": "FDEs work with customer data and systems. Safe defaults protect the customer and the team delivering the solution.",
+  "concept": "Security reduces risk through identity checks, least privilege, encryption, safe defaults, and a clear record of important actions.",
+  "analogy": "It is like a building with a visitor desk, locked rooms, and a sign-in record rather than one key for everyone.",
+  "example": "A support tool needs to read ticket summaries. Grant its service identity read-only access to that workspace and log access decisions.",
+  "mistake": "Giving broad access because it is faster during a demo and forgetting to remove it later.",
+  "nextStep": "Map what data is used, who needs access, and how access is granted, reviewed, and revoked.",
+  "distractor": "Security means hiding the application URL."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+FDEs work with customer data and systems. Safe defaults protect the customer and the team delivering the solution.
+
+## The idea
+
+Security reduces risk through identity checks, least privilege, encryption, safe defaults, and a clear record of important actions.
+
+> It is like a building with a visitor desk, locked rooms, and a sign-in record rather than one key for everyone.
+
+## Worked example
+
+A support tool needs to read ticket summaries. Grant its service identity read-only access to that workspace and log access decisions.
+
+## Common mistakes
+
+- Giving broad access because it is faster during a demo and forgetting to remove it later.
+- Map what data is used, who needs access, and how access is granted, reviewed, and revoked.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

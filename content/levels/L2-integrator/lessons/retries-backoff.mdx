@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "retries-backoff",
+  "title": "Retries and backoff",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Networks and services sometimes fail temporarily. A careful retry can recover; an aggressive retry can make an outage worse.",
+  "concept": "Retry transient failures with a limit and increasing delay. Respect retry-after guidance and avoid retrying errors that need a human or input change.",
+  "analogy": "If a busy office asks you to come back later, wait a bit longer each time instead of knocking every second.",
+  "example": "An API returns 503 and a retry-after value. Pause for the requested period, retry a limited number of times, and record the final outcome.",
+  "mistake": "Retrying every error immediately forever, which can create a retry storm.",
+  "nextStep": "Set a retry limit, use exponential backoff with jitter, and make the operation safe to repeat.",
+  "distractor": "Backoff means increasing the number of parallel requests after a failure."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Networks and services sometimes fail temporarily. A careful retry can recover; an aggressive retry can make an outage worse.
+
+## The idea
+
+Retry transient failures with a limit and increasing delay. Respect retry-after guidance and avoid retrying errors that need a human or input change.
+
+> If a busy office asks you to come back later, wait a bit longer each time instead of knocking every second.
+
+## Worked example
+
+An API returns 503 and a retry-after value. Pause for the requested period, retry a limited number of times, and record the final outcome.
+
+## Common mistakes
+
+- Retrying every error immediately forever, which can create a retry storm.
+- Set a retry limit, use exponential backoff with jitter, and make the operation safe to repeat.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "webhook-foundations",
+  "title": "Webhook foundations",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Webhooks let one system notify another when an event happens, avoiding constant polling.",
+  "concept": "A webhook is an HTTP request sent to a registered endpoint when a source system emits an event. The receiver should verify and acknowledge it quickly.",
+  "analogy": "It is like a doorbell: the sender rings when something happens; the receiver checks who rang and records the visit.",
+  "example": "When a payment settles, the billing system sends an event to your endpoint. Verify its signature, store the event ID, and enqueue the work.",
+  "mistake": "Trusting a webhook body without checking its signature or doing long processing before responding.",
+  "nextStep": "Verify authenticity, acknowledge quickly, and process the event safely in the background.",
+  "distractor": "A webhook is a scheduled report that runs once a month."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Webhooks let one system notify another when an event happens, avoiding constant polling.
+
+## The idea
+
+A webhook is an HTTP request sent to a registered endpoint when a source system emits an event. The receiver should verify and acknowledge it quickly.
+
+> It is like a doorbell: the sender rings when something happens; the receiver checks who rang and records the visit.
+
+## Worked example
+
+When a payment settles, the billing system sends an event to your endpoint. Verify its signature, store the event ID, and enqueue the work.
+
+## Common mistakes
+
+- Trusting a webhook body without checking its signature or doing long processing before responding.
+- Verify authenticity, acknowledge quickly, and process the event safely in the background.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

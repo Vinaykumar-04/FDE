@@ -1,0 +1,30 @@
+export const lesson = {
+  id: 'http-and-status-codes', title: 'HTTP and status codes', minutes: 5, xp: 10,
+  quiz: [
+    { question: 'What does HTTP help a client and server do?', choices: ['Exchange requests and responses', 'Share a keyboard', 'Compile Python'], answer: 0, explanation: 'HTTP is a common set of rules for web requests and responses.' },
+    { question: 'What does a 404 response usually mean?', choices: ['The requested item was not found', 'Everything succeeded', 'The server is restarting'], answer: 0, explanation: '404 means the requested resource was not found.' },
+    { question: 'What does a 500 response usually indicate?', choices: ['A server-side error', 'A successful request', 'A missing keyboard'], answer: 0, explanation: '500 indicates a problem while the server handled the request.' },
+  ],
+  cards: [
+    { front: 'What is HTTP?', back: 'A protocol that lets clients and servers exchange requests and responses.' },
+    { front: 'What does 404 usually mean?', back: 'The requested resource was not found.' },
+    { front: 'What does 500 usually mean?', back: 'The server encountered an error while handling the request.' },
+  ],
+};
+
+## Why it matters for an FDE
+When an integration fails, HTTP details help you find where the problem happened. They are clues you can share with a customer or engineering team.
+
+## The idea
+HTTP is like a request slip sent to a service desk. The client asks for something; the server replies with a result and a status code. A code is a clue, not a complete diagnosis.
+
+## Worked example
+A browser asks an API for `/orders/42`. A `200` response usually means the request worked. A `404` suggests that order wasn’t found at that address. A `500` suggests the server had a problem handling the request.
+
+## Common mistakes
+- Treating every 4xx or 5xx response as the same issue.
+- Assuming a 200 response means the returned data is correct.
+- Sharing sensitive request data while reporting an error.
+
+## Quick check
+Use the three questions above to check your understanding. Read the explanation after each answer.

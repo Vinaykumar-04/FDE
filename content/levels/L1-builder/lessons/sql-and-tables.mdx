@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "sql-and-tables",
+  "title": "SQL and data tables",
+  "minutes": 5,
+  "xp": 10,
+  "why": "Customer data often lives in relational databases. SQL helps you inspect and combine that data without changing it accidentally.",
+  "concept": "A table stores rows of records and columns of fields. SQL statements select, filter, join, or change those records.",
+  "analogy": "A table is like a labeled spreadsheet; a query is a careful instruction for finding specific rows.",
+  "example": "A customer asks for paid orders from yesterday. Filter the orders by status and date, then select only the fields needed for the report.",
+  "mistake": "Running an update or delete before confirming which rows the condition matches.",
+  "nextStep": "Start with a SELECT using the same WHERE condition, review the returned rows, and use a transaction for approved changes.",
+  "distractor": "SQL is a file format that stores images and video."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+Customer data often lives in relational databases. SQL helps you inspect and combine that data without changing it accidentally.
+
+## The idea
+
+A table stores rows of records and columns of fields. SQL statements select, filter, join, or change those records.
+
+> A table is like a labeled spreadsheet; a query is a careful instruction for finding specific rows.
+
+## Worked example
+
+A customer asks for paid orders from yesterday. Filter the orders by status and date, then select only the fields needed for the report.
+
+## Common mistakes
+
+- Running an update or delete before confirming which rows the condition matches.
+- Start with a SELECT using the same WHERE condition, review the returned rows, and use a transaction for approved changes.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

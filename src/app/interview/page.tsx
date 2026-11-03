@@ -1,0 +1,32 @@
+import Link from 'next/link';
+import careerData from '../../../content/careers/companies.json';
+
+const questions = [
+  { category: 'CUSTOMER DISCOVERY', q: 'A customer says, “We need AI.” What would you ask before proposing a solution?', signal: 'Listen for workflow, users, current workaround, success measure, data, and constraints.' },
+  { category: 'SCOPING', q: 'The customer asks for five features before a launch next week. How would you decide what to ship first?', signal: 'Show how you find the smallest safe outcome, explain trade-offs, and agree on scope.' },
+  { category: 'INTEGRATIONS', q: 'Two systems send duplicate and out-of-order events. How would you make the sync reliable?', signal: 'Consider stable IDs, idempotency, retries, ordering, logging, and a recovery plan.' },
+  { category: 'DEBUGGING', q: 'An integration works in a demo but fails for one customer. How would you investigate?', signal: 'Reproduce with a specific example, compare environments, check logs, and protect customer data.' },
+  { category: 'AI SYSTEMS', q: 'How would you make an AI assistant answer from approved documents and show its sources?', signal: 'Explain retrieval, grounding, structured output, evaluation, and failure handling.' },
+  { category: 'SECURITY', q: 'How would you keep one customer’s information separate from another customer’s?', signal: 'Discuss tenant boundaries, access checks, secrets, tests, and auditability.' },
+  { category: 'DEPLOYMENT', q: 'A customer can only run software inside its own network. What would you clarify before deployment?', signal: 'Ask about network access, identity, storage, updates, approvals, and operational owners.' },
+  { category: 'COMMUNICATION', q: 'Explain a production issue to a nontechnical stakeholder. What would you say?', signal: 'Give a clear impact, current status, next action, and when you will update them.' },
+  { category: 'OWNERSHIP', q: 'Tell me about something you built that another person used. What changed because of it?', signal: 'Use a specific story: context, your choices, the result, and what you learned.' },
+];
+
+export default function InterviewPage() {
+  return <div className="page-wrap interview-page">
+    <div className="page-heading interview-heading"><div><span className="section-kicker">FIELD GUIDE · CAREER</span><h1>Take it to the <em>field.</em></h1></div><span className="interview-stamp">CAREER<br/>DESK<br/>01—03</span></div>
+    <section className="career-intro"><span className="section-kicker">A GOOD INTERVIEW IS A WORKING SESSION</span><p>FDE interviews often explore how you think through customer problems, build reliable software, and explain decisions. These are <b>practice questions</b> based on common job responsibilities—not a ranked survey of interview frequency.</p></section>
+    <div className="content-section-heading"><div><span className="section-kicker">01 — PRACTICE</span><h2>Questions from the <em>field.</em></h2></div><span className="muted-copy">Think out loud. Start with the customer.</span></div>
+    <div className="question-list">{questions.map((item, index) => <details className="question-row" key={item.category}><summary><span className="question-number">{String(index + 1).padStart(2, '0')}</span><span className="question-category">{item.category}</span><b>{item.q}</b><span className="question-open">+</span></summary><div className="question-signal"><span className="section-kicker">WHAT A STRONG ANSWER CAN SHOW</span><p>{item.signal}</p></div></details>)}</div>
+    <section className="apply-guide"><div className="apply-head"><span className="section-kicker">02 — APPLY</span><h2>Make the next<br/><em>move.</em></h2><p>Keep it focused and specific. A strong application shows how your skills connect to the team’s work.</p></div><div className="apply-steps">{[
+      ['01', 'Find a role that fits', 'Search official careers pages for FDE, Forward Deployed, Solutions Engineer, Deployment Engineer, or Implementation Engineer. Read the responsibilities and location carefully.'],
+      ['02', 'Match your evidence', 'Choose two or three requirements from the posting. Connect each one to a project, lesson, or customer problem you can explain honestly.'],
+      ['03', 'Make your resume specific', 'Lead with outcomes and tools you used. Keep it readable, tailor the summary, and link to a portfolio project that works.'],
+      ['04', 'Apply on the official page', 'Use the company’s application link. Follow the posting’s instructions, include your portfolio, and save the role URL and application date.'],
+      ['05', 'Prepare and follow up', 'Practice a customer discovery story, a debugging example, and a short demo. Follow up politely if the recruiter gave you a timeline.'],
+    ].map(([num, title, body]) => <div className="apply-step" key={num}><span>{num}</span><div><b>{title}</b><p>{body}</p></div></div>)}</div></section>
+    <section className="company-section"><div className="content-section-heading"><div><span className="section-kicker">03 — EXPLORE</span><h2>Teams in the <em>field.</em></h2></div><div className="asof-badge"><span className="pulse-dot"/> POSTINGS CHECKED<br/><b>{careerData.checkedOn.split('-').reverse().join(' ')}</b></div></div><p className="company-disclaimer">Examples of companies with FDE or closely related postings on their official careers pages when checked. Openings and locations change—confirm details on the linked page before applying.</p><div className="company-list">{careerData.companies.map((company, index) => <a className="company-row" href={company.url} key={company.name} target="_blank" rel="noreferrer"><span className="company-serial">{String(index + 1).padStart(2, '0')}</span><span className="company-main"><b>{company.name}</b><small>{company.note}</small></span><span className="company-role"><b>{company.role}</b><small>{company.place}</small></span><span className="company-link">OPEN POSTING ↗</span></a>)}</div><p className="company-source-note">Each listing links to a company careers page. Availability may change after the date checked.</p></section>
+    <section className="portfolio-callout"><span className="section-kicker">YOUR FIELD PROOF</span><h2>Show what you can <em>ship.</em></h2><p>Build one small integration, explain the customer problem, show the trade-offs, and write down how someone else can run it.</p><Link className="button button-blue" href="/level/L0-recruit/">Start with Level 0 <span>↗</span></Link></section>
+  </div>;
+}

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "tools-evals",
+  "title": "Tool calling and evaluations",
+  "minutes": 6,
+  "xp": 10,
+  "why": "A model can decide that a tool would help, but tool calls still need validation and clear limits.",
+  "concept": "Tool calling lets a model request a defined function. An evaluation checks model behavior against examples and expected criteria.",
+  "analogy": "The model is a dispatcher; tools are workers with specific job descriptions, and evaluations are practice inspections.",
+  "example": "The assistant proposes a read-only order lookup. Validate the order ID and user access, run the lookup, then show the result with its source.",
+  "mistake": "Letting model-generated arguments directly perform a sensitive action without checking permissions or results.",
+  "nextStep": "Keep tools narrow, validate every argument, log actions, and run a representative evaluation set before release.",
+  "distractor": "An evaluation is a single successful demo with no expected answers."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+A model can decide that a tool would help, but tool calls still need validation and clear limits.
+
+## The idea
+
+Tool calling lets a model request a defined function. An evaluation checks model behavior against examples and expected criteria.
+
+> The model is a dispatcher; tools are workers with specific job descriptions, and evaluations are practice inspections.
+
+## Worked example
+
+The assistant proposes a read-only order lookup. Validate the order ID and user access, run the lookup, then show the result with its source.
+
+## Common mistakes
+
+- Letting model-generated arguments directly perform a sensitive action without checking permissions or results.
+- Keep tools narrow, validate every argument, log actions, and run a representative evaluation set before release.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,30 @@
+export const lesson = {
+  id: 'json-and-integrations', title: 'JSON and integrations', minutes: 5, xp: 10,
+  quiz: [
+    { question: 'What is JSON commonly used for?', choices: ['Representing structured data', 'Drawing a 3D model', 'Replacing a network'], answer: 0, explanation: 'JSON is a text format for structured data.' },
+    { question: 'What kind of value belongs inside JSON quotes?', choices: ['A string such as "ready"', 'A missing comma', 'An unclosed brace'], answer: 0, explanation: 'Text values in JSON are written as quoted strings.' },
+    { question: 'What is an integration?', choices: ['A connection that lets systems exchange data or actions', 'A type of monitor', 'A Git password'], answer: 0, explanation: 'Integrations connect systems so information or actions can flow between them.' },
+  ],
+  cards: [
+    { front: 'What is JSON?', back: 'A text format used to represent structured data.' },
+    { front: 'What is a JSON object?', back: 'A collection of key-value pairs inside curly braces.' },
+    { front: 'What is an integration?', back: 'A connection that lets different systems exchange data or trigger actions.' },
+  ],
+};
+
+## Why it matters for an FDE
+Business systems often need to exchange customer, order, or event data. JSON is one common format you’ll inspect while building those connections.
+
+## The idea
+JSON is like a labeled form. Each key names a field, and its value holds the information. For example, `{ "status": "ready" }` says that the status field has the text value “ready”.
+
+## Worked example
+An order service might send `{ "orderId": 42, "status": "packed" }`. An integration reads those fields and passes the information to another system. Names, data types, and required fields need to match what the receiving system expects.
+
+## Common mistakes
+- Missing quotation marks or commas.
+- Sending a number as text when the receiving system expects a number.
+- Assuming two systems use the same field names.
+
+## Quick check
+Use the three questions above to check your understanding. Read the explanation after each answer.

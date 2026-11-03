@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "rag-grounding",
+  "title": "Retrieval-augmented generation",
+  "minutes": 6,
+  "xp": 10,
+  "why": "A model may not know a customer’s private or recent information. Retrieval can provide approved source material for an answer.",
+  "concept": "RAG retrieves relevant documents and supplies their passages as context for a model to answer from.",
+  "analogy": "It is like an open-book exam: the answer should be grounded in the pages provided, and the reader should show which pages were used.",
+  "example": "Search a permitted policy collection, pass the best matching passages to the model, and display links to those passages with the answer.",
+  "mistake": "Assuming retrieval guarantees a correct answer or failing to enforce document access before search.",
+  "nextStep": "Check access before retrieval, evaluate source relevance, cite evidence, and let the system say when evidence is missing.",
+  "distractor": "RAG means retraining a model on every customer question."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+A model may not know a customer’s private or recent information. Retrieval can provide approved source material for an answer.
+
+## The idea
+
+RAG retrieves relevant documents and supplies their passages as context for a model to answer from.
+
+> It is like an open-book exam: the answer should be grounded in the pages provided, and the reader should show which pages were used.
+
+## Worked example
+
+Search a permitted policy collection, pass the best matching passages to the model, and display links to those passages with the answer.
+
+## Common mistakes
+
+- Assuming retrieval guarantees a correct answer or failing to enforce document access before search.
+- Check access before retrieval, evaluate source relevance, cite evidence, and let the system say when evidence is missing.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.

@@ -1,0 +1,39 @@
+import { buildLesson } from '../../../../src/lib/lesson-builder';
+
+export const draft = {
+  "id": "observability-incidents",
+  "title": "Observability and incidents",
+  "minutes": 6,
+  "xp": 10,
+  "why": "When a customer reports a problem, you need evidence about what the system did and how users were affected.",
+  "concept": "Logs record events, metrics summarize measurements over time, and traces connect work across services. Incident response coordinates impact reduction and recovery.",
+  "analogy": "Logs are individual notes, metrics are a dashboard of vital signs, and traces follow one request through the system.",
+  "example": "A customer sees slow syncs. Compare request duration metrics, inspect a trace for the slow dependency, and update the incident timeline.",
+  "mistake": "Changing several systems at once before preserving evidence or communicating customer impact.",
+  "nextStep": "Confirm impact, assign an owner, use observable evidence, communicate updates, and record follow-up actions.",
+  "distractor": "Observability means collecting every customer field in a log."
+};
+export const lesson = buildLesson(draft);
+
+## Why it matters for an FDE
+
+When a customer reports a problem, you need evidence about what the system did and how users were affected.
+
+## The idea
+
+Logs record events, metrics summarize measurements over time, and traces connect work across services. Incident response coordinates impact reduction and recovery.
+
+> Logs are individual notes, metrics are a dashboard of vital signs, and traces follow one request through the system.
+
+## Worked example
+
+A customer sees slow syncs. Compare request duration metrics, inspect a trace for the slow dependency, and update the incident timeline.
+
+## Common mistakes
+
+- Changing several systems at once before preserving evidence or communicating customer impact.
+- Confirm impact, assign an owner, use observable evidence, communicate updates, and record follow-up actions.
+
+## Quick check
+
+Answer the three questions below. Read the explanation before moving on.
