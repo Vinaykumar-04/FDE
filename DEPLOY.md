@@ -23,4 +23,4 @@ Run `npm ci && npm run build`, then publish the contents of `out/`. Configure th
 
 Run `npm run build` followed by `npm run start` and open `http://localhost:3000`. The start script serves the static export in `out/`; `next start` is not used for this static site.
 
-Progress lives in each learner's browser storage. It is not synced between devices; learners can export and import a JSON backup from Profile.
+Guest progress is saved in the learner's browser. With Supabase configured, learners can create an account and sync progress across devices. See [ACCOUNT_SETUP.md](ACCOUNT_SETUP.md) for setup. Learners can also export and import a JSON backup from Profile.
