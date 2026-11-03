@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import { useAccount } from '@/components/AccountProvider';
 import { levels } from '@/lib/content';
 import { useProgressStore } from '@/lib/progress';
+import { ProfileCustomizer } from '@/components/ProfileCustomizer';
 
 export default function ProfilePage() {
   const state = useProgressStore();
@@ -31,6 +32,7 @@ export default function ProfilePage() {
     <Link href="/map/" className="back-link">← Learning path</Link>
     <div className="page-heading"><div><span className="section-kicker">YOUR FIELD RECORD</span><h1>Profile & <em>progress.</em></h1></div></div>
     <section className="profile-account"><div><span className="section-kicker">{account.user ? 'ACCOUNT SYNC' : 'BACK UP YOUR PROGRESS'}</span><b>{account.user ? account.user.email : 'Keep learning on any device.'}</b><small>{account.user ? account.syncMessage : 'Create a free account to sync lessons, scores, and XP.'}</small></div><Link className="button button-outline" href="/account/">{account.user ? 'Account settings' : 'Create an account'} <span>↗</span></Link></section>
+    <ProfileCustomizer />
     <div className="profile-card"><span className="profile-rank-mark">✦</span><div><span className="section-kicker">CURRENT RANK</span><h2>{rank}</h2><p>{state.xp} experience points · {state.completedLessons.length} lessons complete</p></div><span className="profile-xp">{state.xp}<small>XP</small></span></div>
     <div className="profile-stats"><div><small>LESSONS COMPLETE</small><b>{state.completedLessons.length}</b></div><div><small>FIELD CHALLENGES</small><b>{Object.keys(state.gameBest).length}</b></div><div><small>BOSSES CLEARED</small><b>{state.bossPassed.length}</b></div><div><small>BADGES EARNED</small><b>{state.badges.length}</b></div></div>
     <section className="profile-levels"><span className="section-kicker">THE PATH AHEAD</span>{levels.map((level, index) => { const unlocked = index === 0 || state.bossPassed.includes(levels[index - 1].id); return <div className="profile-level-row" key={level.id}><span>{level.code}</span><b>{level.rank}</b><small>{state.bossPassed.includes(level.id) ? 'CLEARED' : unlocked ? 'OPEN' : 'LOCKED'}</small></div>; })}</section>
